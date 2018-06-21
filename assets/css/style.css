@@ -1,0 +1,36 @@
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.main-head {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.body {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#search-box {
+    position: relative;
+    float: right;
+    
+    margin: 0 auto;
+}
+
+#gifs-box{
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+  
+}
+
