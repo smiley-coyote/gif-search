@@ -1,3 +1,7 @@
+body {
+    background-image: url("../images/qbkls.png")
+}
+
 h1 {
     display: block;
     font-size: 2em;
