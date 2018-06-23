@@ -1,5 +1,9 @@
 body {
-    background-image: url("../images/qbkls.png")
+    background-image: url("../images/twinpeaks_background.jpg");
+    font-family: 'PT Sans', sans-serif;
+}
+p, h1, h2 {
+    color: white;
 }
 
 h1 {
@@ -11,15 +15,33 @@ h1 {
     margin-right: 0;
     font-weight: bold;
 }
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+#title-image {
 
+    width: 500px;
+    height: auto;
+    bottom: 0;
+}
 .main-head {
     position: relative;
     width: 100%;
     height: auto;
     text-align: center;
 }
+.main-head h2 {
+    position: relative;
+     margin-top: 0;
+}
 
-.body {
+.button-head {
     width: 960px;
     margin: 0 auto;
 }
@@ -33,8 +55,105 @@ h1 {
 
 #gifs-box{
     position: relative;
+    top: 5%;
+    left: -50%;
     width: 960px;
-    margin: 0 auto;
+    height: 575px;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
   
+}
+#gifs-box img{
+    position: relative;
+   
+    width: 300px;
+    height: auto;
+    display: inline-block;
+}
+
+
+#gifs-box div {
+    display: inline-block;
+}
+.main-body {
+    position: absolute;
+    left: 50%;
+    height: 600px;
+}
+
+#giffy {
+    position: absolute;
+    width: 170px;
+    height: auto;
+    right: 0; 
+    bottom: 0;
+}
+
+
+
+@media only screen and (max-width: 980px) {
+    .button-head{
+        width: 650px;
+    }
+    #gifs-box{
+        width: 650px;
+    }
+    #title-image {
+
+        width: 400px;
+        height: auto;
+        bottom: 0;
+    }
+    #giffy {
+        position: absolute;
+        width: 150px;
+        height: auto;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .button-head{
+        width: 650px;
+    }
+    #gifs-box{
+        width: 650px;
+    }
+    #title-image {
+
+        width: 300px;
+        height: auto;
+        bottom: 0;
+    }
+    #giffy {
+        position: absolute;
+        width: 120px;
+        height: auto;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .button-head{
+        width: 480px;
+    }
+    #gifs-box{
+        width: 480px;
+    }
+    #giffy {
+        position: absolute;
+        width: 120px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .button-head{
+        width: 320px;
+    }
+    #gifs-box{
+        width: 320px;
+    }
+    #giffy {
+        position: absolute;
+        width: 60px;
+        height: auto;
+    }
 }
 

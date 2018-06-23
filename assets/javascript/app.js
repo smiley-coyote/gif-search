@@ -1,4 +1,4 @@
-var buttonArr = ["happy", "excited", "sad", "angry", "scared"];
+var buttonArr = ["laura palmer", "dale cooper", "audrey horne", "log lady", "killer bob"];
 
 $(document).ready(function(){
     function start() {
@@ -6,14 +6,16 @@ $(document).ready(function(){
             var newButton = $("<button>" + buttonArr[i] + "</button>");
             newButton.addClass("data-button");
             newButton.attr("data-name", buttonArr[i]);
-            $(".body").append(newButton);
+            $(".button-head").append(newButton);
         }
     }
 
     $(document).on("click", ".data-button", function() {
         var word = $(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        word + "&api_key=dGrqwMFiqAjfyJQQ0xVk43lmaNRtnDBr&limit=10";
+        var queryURL = 
+         "https://api.giphy.com/v1/gifs/search?q=twin peaks " +
+         word + "&api_key=dGrqwMFiqAjfyJQQ0xVk43lmaNRtnDBr&limit=10";
+        console.log(queryURL)
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -49,14 +51,11 @@ $(document).ready(function(){
         var newButton = $("<button>" + newWord + "</button>");
         newButton.attr("data-name", newWord);
         newButton.addClass("data-button");
-        $(".body").append(newButton);
+        $(".button-head").append(newButton);
+        $("#add-word").val("");
     })
     $(document).on("click", ".gif", function() {
-        // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
         var state = $(this).attr("data-state");
-        // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-        // Then, set the image's data-state to animate
-        // Else set src to the data-still value
         if (state === "still") {
           $(this).attr("src", $(this).attr("data-animate"));
           $(this).attr("data-state", "animate");
@@ -66,7 +65,15 @@ $(document).ready(function(){
         }
       });
     
-
+      var input = document.getElementById("add-word");
+      input.addEventListener("keyup", function(event) {
+          event.preventDefault();
+          if (event.keyCode === 13) {
+              document.getElementById("new").click();
+          }
+      });
 
 start();
 });
+
+
